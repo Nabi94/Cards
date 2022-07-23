@@ -141,13 +141,30 @@
 
 
 /* Responsive */
+/* For Tablet */
+@media only screen and (max-width:768px){
+    .card{
+        display: flex;
+        flex-direction: column;
+        &__content{
+            padding: 15px;
+        }
+        &__img{
+            border-radius: 14px 14px 0 0;
+        }
+
+    }
+
+}
+/* End of Tablet */
 /* For Mobile */
+
 @media only screen and (max-width:425px){
     .card{
         display: flex;
         flex-direction: column;
         &__content{
-            padding: 12px;
+            padding: 30px;
         }
         &__img{
             width: 100%;
@@ -191,16 +208,17 @@
         }
     }
 }
-/* End for Mobile */
-/* For Tablet */
-@media only screen and (max-width:768px){
+@media only screen and (max-width:320px){
     .card__content{
-        padding: 0 15px;
+        padding: 15px;
     }
-    .card__footer{
-        padding: 0 15px;
+    .card__link{
+        font-size: 10px;
     }
-
 }
+/* End for Mobile */
+
+
+
 
 
