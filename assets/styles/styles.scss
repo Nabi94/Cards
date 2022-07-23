@@ -10,14 +10,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
-    background-color: red;
-    max-width: 100%;
-    
-}
 .main{
     background-color: #EFF0F3;
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 .container{
@@ -36,13 +33,13 @@ html,body{
 .card{
     background-color: #ffffff;
     display: flex;
-    width: 80%;
-    height: 400px;
+    width: 100%;
+    height:auto;
     border-radius: 14px;
     /* Logo */
     &__img{
         background: #BCD1FF;
-        width: 40%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -54,7 +51,7 @@ html,body{
     }
     /* End of Logo */
     &__content{
-        width: 60%;
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -91,7 +88,7 @@ html,body{
     &__title{
         color:#081F32;
         font-family: var(--DmSerif);
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 400;
         margin-bottom: 10px;
 
@@ -144,21 +141,66 @@ html,body{
 
 
 /* Responsive */
-@media only screen and (max-width:320px){
-    .main{
-        display: flex;
-        justify-content: center;
-    }
-    
+/* For Mobile */
+@media only screen and (max-width:425px){
     .card{
         display: flex;
         flex-direction: column;
+        &__content{
+            padding: 12px;
+        }
         &__img{
             width: 100%;
             border-radius: 14px 14px 0 0;
         }
+        &__logo{
+            width: 50%;
+        }
+        &__header{
+            padding: 0 5px;
+        }
+        &__prod{
+            font-size: 13px;
+        }
+        &__time{
+            font-size: 13px;
+        }
+        &__main{
+            padding: 5px;
+        }
         &__title{
-            font-size: 14px;
+            font-size: 15px;
+        }
+        &__subtitle{
+            font-size: 13px;
+        }
+        &__footer{
+            padding:0 5px;
+        }
+        &__avatar{
+            width: 15%;
+        }
+        &__personLink{
+            font-size: 13px;
+        }
+        &__link{
+            font-size: 13px;
+            i{
+                font-size: 13px;
+            }
         }
     }
 }
+/* End for Mobile */
+/* For Tablet */
+@media only screen and (max-width:768px){
+    .card__content{
+        padding: 0 15px;
+    }
+    .card__footer{
+        padding: 0 15px;
+    }
+
+}
+
+

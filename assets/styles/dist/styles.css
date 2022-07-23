@@ -12,16 +12,17 @@
           box-sizing: border-box;
 }
 
-html, body {
-  background-color: red;
-  max-width: 100%;
-}
-
 .main {
   background-color: #EFF0F3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
@@ -54,8 +55,8 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
-  height: 400px;
+  width: 100%;
+  height: auto;
   border-radius: 14px;
   /* Logo */
   /* End of Logo */
@@ -69,7 +70,7 @@ html, body {
 }
 .card__img {
   background: #BCD1FF;
-  width: 40%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,7 +87,7 @@ html, body {
   height: auto;
 }
 .card__content {
-  width: 60%;
+  width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,7 +139,7 @@ html, body {
 .card__title {
   color: #081F32;
   font-family: var(--DmSerif);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -198,15 +199,8 @@ html, body {
 
 /* End of Cards */
 /* Responsive */
-@media only screen and (max-width: 320px) {
-  .main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+/* For Mobile */
+@media only screen and (max-width: 425px) {
   .card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -216,11 +210,57 @@ html, body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .card__content {
+    padding: 12px;
+  }
   .card__img {
     width: 100%;
     border-radius: 14px 14px 0 0;
   }
+  .card__logo {
+    width: 50%;
+  }
+  .card__header {
+    padding: 0 5px;
+  }
+  .card__prod {
+    font-size: 13px;
+  }
+  .card__time {
+    font-size: 13px;
+  }
+  .card__main {
+    padding: 5px;
+  }
   .card__title {
-    font-size: 14px;
+    font-size: 15px;
+  }
+  .card__subtitle {
+    font-size: 13px;
+  }
+  .card__footer {
+    padding: 0 5px;
+  }
+  .card__avatar {
+    width: 15%;
+  }
+  .card__personLink {
+    font-size: 13px;
+  }
+  .card__link {
+    font-size: 13px;
+  }
+  .card__link i {
+    font-size: 13px;
+  }
+}
+/* End for Mobile */
+/* For Tablet */
+@media only screen and (max-width: 768px) {
+  .card__content {
+    padding: 0 15px;
+  }
+  .card__footer {
+    padding: 0 15px;
   }
 }/*# sourceMappingURL=styles.css.map */
